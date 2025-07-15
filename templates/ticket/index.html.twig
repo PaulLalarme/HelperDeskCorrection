@@ -23,8 +23,8 @@
                 <td>{{ ticket.id }}</td>
                 <td>{{ ticket.titre }}</td>
                 <td>{{ ticket.description }}</td>
-                <td>{{ ticket.priorite }}</td>
-                <td>{{ ticket.statut }}</td>
+                <td>{{ ticket.priorite.value }}</td>
+                <td>{{ ticket.statut.value }}</td>
                 <td>{{ ticket.createdAt ? ticket.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <a href="{{ path('app_ticket_show', {'id': ticket.id}) }}">show</a>
