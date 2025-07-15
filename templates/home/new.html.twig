@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1 class="mb-3">Nouveau ticket</h1>
+
+{{ form_start(form, { attr: { class: 'row g-3' } }) }}
+    <div class="col-12">
+        {{ form_row(form.title) }}
+    </div>
+    <div class="col-12">
+        {{ form_row(form.description) }}
+    </div>
+    <div class="col-12">
+        {{ form_row(form.priority) }}
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Créer
+        </button>
+        <a href="{{ path('app_ticket_index') }}" class="btn btn-outline-secondary">Annuler</a>
+    </div>
+{{ form_end(form) }}
+{% endblock %}
